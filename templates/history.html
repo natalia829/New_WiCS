@@ -1,0 +1,82 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+<!--Symbol	Shares	Price	Transacted-->
+<p id = 'hcomp'>
+    WiCS Comp Tracker!
+</p>
+<br>
+<p id = 'progress'>
+    Your attendance so far!
+</p>
+{% if not check %}
+  <p>
+    {{ edu }} {{ edul }}
+  </p>
+{% endif %}
+{% if check == true %}
+  <p>
+    You have completed category requirements.
+  </p>
+{% endif %}
+{% if total < 5 %}
+  <p>
+    {{ edu2 }}
+  </p>
+{% endif %}
+{% if total == 5 %}
+  <p>
+    You still need to attend 1 event.
+  </p>
+{% endif %}
+<br>
+<p id = 'progress'>
+    Progress!
+</p>
+
+<div class="progress">
+<div class="progress-bar progress-bar-striped active progress-bar-success" role="progressbar"
+aria-valuenow= {{ progress }} aria-valuemin="0" aria-valuemax="100" style="width: {{ progress }}%">
+   {{ progress }}%
+  </div>
+</div>
+<br>
+<br>
+<p id = 'progress'>
+    Attendance Record
+</p>
+<table class="table table-striped itable">
+  <thead>
+    <tr>
+      <th scope="col"> </th>
+      <th scope="col">Event Name</th>
+      <th scope="col">Category</th>
+      <th scope="col">Date Submitted</th>
+      <th scope="col">Photo</th>
+      <th scope="col">Other Proof</th>
+      <th scope="col">Status</th>
+    </tr>
+  </thead>
+<tbody>
+    {% for dict in  dlist %}
+    <tr>
+      <td>{{ (dict['num']) }}</td>
+      <td>{{ (dict['event_name']) }}</td>
+      <td>{{ (dict['category']) }}</td>
+      <td>{{ (dict['time']) }}</td>
+      <td>{{ dict['photo'] }}</td>
+      <td>{{ dict['other_proof'] }}</td>
+      <td>{{ dict['approve'] }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
+
+<!-- Progress Bar from Bootstrap
+https://www.w3schools.com/bootstrap/bootstrap_progressbars.asp
+-->

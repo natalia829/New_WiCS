@@ -1,0 +1,169 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Resources
+{% endblock %}
+
+
+{% block main %}
+    <div class = 'resources'>
+        <link href="static/style.css" rel="stylesheet">
+
+        <!--html for bootstrap slide show-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+        <!--html for fonts-->
+        <!--black boxes-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allerta+Stencil">
+        <!--cursive-->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+        <style>
+        /* Make the image fully responsive */
+        .carousel-inner img {
+            width: 40%;
+            height: 40%;
+            margin-bottom:50px;
+        }
+        /* font for "Learning how to code" section */
+        .w3-allerta {
+            font-family: "Allerta Stencil", Sans-serif;
+        }
+        /*font for You Belong*/
+        .w3-tangerine {
+            font-family: "Tangerine", serif;
+        }
+
+        hr {
+            border-top: 1px solid grey;
+        }
+        </style>
+    </div>
+    <div>
+        Resources
+        <h1 class = "main_resources">Gender Gap in Computer Science</h1>
+        <br>
+            <div align="center" id="demo" class="carousel slide" data-ride="carousel">
+
+                <!-- Indicators -->
+                <ul class="carousel-indicators li">
+                    <li data-target="#demo" data-slide-to="0" class="active"></li>
+                    <li data-target="#demo" data-slide-to="1"></li>
+                    <li data-target="#demo" data-slide-to="2"></li>
+                </ul>
+
+                <!-- The slideshow -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="/static/gendergap3.jpg" alt="Gender Gap Intro">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="/static/gendergap2.png" alt="Percentage of Women">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="/static/gendergap1.png" alt="Inequities between Girls and Boys">
+                    </div>
+                </div>
+
+                <!-- Left and right controls -->
+                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#demo" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+
+            </div>
+
+        <br><br>
+        <center>Read more about Harvard's statement on Diversity, Inclusion, and Belonging <a href="https://www.seas.harvard.edu/office-diversity-inclusion-and-belonging">here</a>.</center>
+
+        <div id="belonging" class="w3-container w3-tangerine">
+            You Belong!
+        </div>
+
+        <hr><br>
+
+        <div class="w3-allerta">
+            <center><h1 class = "main_resources">Learn How to Code</h1></center>
+            <a class="w3-xxxlarge" href="https://www.codecademy.com/">Code Academy</a>
+
+            <a class="w3-xxxlarge" href="https://code.org/">Code.org</a>
+
+            <a class="w3-xxxlarge" href="https://hourofcode.com/us">Hour of Code</a>
+
+            <a class="w3-xxxlarge" href="https://www.khanacademy.org/computing">Khan Academy</a>
+
+            <a class="w3-xxxlarge" href="https://www.freecodecamp.org">Free Code Camp</a>
+
+            <a class="w3-xxxlarge" href="https://www.coursera.org/browse/computer-science">Coursera</a>
+
+            <a class="w3-xxxlarge" href="https://www.edx.org/course/subject/computer-science">edX</a>
+
+            <a class="w3-xxxlarge" href="https://www.codewars.com/">Codewars</a>
+
+        </div>
+
+        <hr><br>
+
+        <div class="opportunities">
+            <h1 class = "main_resources">Summer Opportunities</h1>
+            <h2 class = "sub">Internships</h2>
+            <!--<a href="https://careers.google.com/students/engineering-and-technical-internships/">Google Internships</a>-->
+            <h4><a href="https://careers.google.com/jobs/results/?company=Google&company=YouTube&employment_type=INTERN&jlo=en_US&q=STEP">Google: STEP</a></h4>
+                <p class ="description">
+                    Google's STEP program is a developmental opportunity for first- and second-year undergraduate students
+                    with a passion for technology—especially students from historically underrepresented groups in the field.
+                </p>
+            <h4><a href="https://careers.google.com/jobs/results/?company=Google&company=YouTube&employment_type=INTERN&jlo=en_US&q=Software%20Engineer">Google: Software Engineering Internship</a></h4>
+                <p class ="description">
+                    This internship is intended for students with experience in Data Structures or Algorithms.
+                </p>
+
+            <h4><a href="https://careers.microsoft.com/students/us/en/usexploremicrosoftprogram">Explore Microsoft</a></h4>
+                <p class ="description">
+                    Explore Microsoft is a 12-week summer internship program specifically designed for first and second year college students.
+                </p>
+            <h4><a href="https://www.facebook.com/careers/students-and-grads/students">Facebook University</a></h4>
+                <p class ="description">
+                    Facebook University is a hands-on, immersive internship program that enables students from underrepresented communities
+                    to get to know Facebook’s people, products and services. In just eight weeks, the program gives interns across engineering,
+                    analytics, product design, operations and global marketing solutions roles the opportunity to make a real impact and help
+                    redefine how the world connects.
+                </p>
+            <h4><a href="https://careers.twitter.com/en/university.html">Twitter Academy</a></h4>
+                <p class ="description">
+                    Twitter offers 12-week fall, spring, or summer internships all over the world.
+                </p>
+            <h4><a href="https://www.codingitforward.com/fellowship">Coding it Forward</a></h4>
+                <p class ="description">
+                    This is internship program for innovative students to solve pressing problems in federal agencies. Civic Digital Fellows
+                    are mission-driven software engineers, data scientists, product managers, and designers who spend their summers innovating
+                    at the intersection of technology and public service.
+                </p>
+
+            <h2 class = "sub">Research</h2>
+            <h4><a href="https://www.seas.harvard.edu/computer-science/undergraduate-program/research-opportunities">Undergraduate Research Opporunities at Harvard</a></h4>
+                <p class ="description">
+                    Find out more about the undergraduate research opportunities in Computer Science here at Harvard.
+                </p>
+            <h4><a href="https://oge.mit.edu/graddiversity/msrp/">MIT Summer Research Program</a></h4>
+                <p class ="description">
+                    This is a nine-week, fully funded summer program that seeks to bring together talented
+                    underrepresented minorities and underserved students to engage in on-capmus research led by
+                    MIT faculty, grad students, and postdoctoral fellows.
+                </p>
+            <h4><a href="https://cra.org/cra-wp/dreu/">Distributed Research Experiences for Undergraduates (DREU)</a></h4>
+                <p class ="description">
+                    DREU is a highly selective program that aims to increase the number of students from underrepresented
+                    groups (including women, minorities, or persons with disabilities) interested in Computer Science by
+                    matching them with a faculty mentor for a summer research experience at the faculty mentor’s home institution.
+                </p>
+        </div>
+        </div>
+
+{% endblock %}
+

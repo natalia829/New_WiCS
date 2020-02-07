@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <!-- CalenderL-->
+
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- documentation at http://getbootstrap.com/docs/4.1/, alternative themes at https://bootswatch.com/ -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- https://favicon.io/emoji-favicons/money-mouth-face/ -->
+        <link href="/static/wics_logo.png" rel="icon">
+
+        <link href="/static/styles.css" rel="stylesheet">
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+        <title>WiCS Comp: {% block title %}{% endblock %}</title>
+
+    </head>
+
+    <body>
+
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top topnav">
+
+            <a href="/"><img src="//static1.squarespace.com/static/543214d2e4b00758e02f8714/t/545982bbe4b0d314814e0211/1574014461904/?format=1500w" class="logo" alt="Harvard Women in Computer Science"></a>
+            <button aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbar" data-toggle="collapse" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar">
+                {% if session.user_id %}
+                    {% if session.user_id == 11 %}
+                        <ul class="navbar-nav mr-auto mt-2">
+                            <li class="nav-item"><a class="nav-link" href="/attendance">Add Attendance</a></li>
+                            <li class="nav-item"><a class="nav-link" href = "/resources">Resources</a></li>
+                            <li class="nav-item"><a class="nav-link" href = "/approve">Approve Attendance</a></li>
+
+                        </ul>
+                        <ul class="navbar-nav ml-auto mt-2">
+                            <li class="nav-item"><a class="nav-link" href="/logout">Log Out</a></li>
+                        </ul>
+
+                    {% else %}
+                         <ul class="navbar-nav mr-auto mt-2">
+                            <li class="nav-item"><a class="nav-link" href="/attendance">Add Attendance</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/history">Track Attendance</a></li>
+                             <li class="nav-item"><a class="nav-link" href = "/resources">Resources</a></li>
+                        </ul>
+                        <ul class="navbar-nav ml-auto mt-2">
+                            <li class="nav-item"><a class="nav-link" href="/logout">Log Out</a></li>
+                        </ul>
+                    {% endif %}
+                {% else %}
+                    <ul class="navbar-nav ml-auto mt-2">
+                        <li class="nav-item"><a class="nav-link" href="/register">Register</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/login">Log In</a></li>
+                    </ul>
+                {% endif %}
+            </div>
+        </nav>
+        {% if get_flashed_messages() %}
+            <header>
+                <div class="alert alert-primary border text-center" role="alert">
+                    {{ get_flashed_messages() | join(" ") }}
+                </div>
+            </header>
+        {% endif %}
+        <main class="container p-5">
+            {% block main %}{% endblock %}
+        </main>
+        <footer class="small text-center text-muted">
+            WiCS Comp All Rights Reserved 2019
+        </footer>
+    </body>
+</html>

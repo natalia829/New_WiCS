@@ -1,0 +1,171 @@
+nav .navbar-brand
+{
+    /* size for brand */
+    font-size: xx-large;
+}
+
+/* colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+nav .navbar-brand .red
+{
+    color: #ea433b;
+}
+nav .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+nav .navbar-brand .green
+{
+    color: #2e944b;
+}
+
+main .form-control
+{
+    /* center form controls */
+    display: inline-block;
+
+    /* override Bootstrap's 100% width for form controls */
+    width: auto;
+}
+
+main
+{
+    /* scroll horizontally as needed */
+    overflow-x: auto;
+
+    /* center contents */
+    text-align: center;
+}
+
+
+
+main img
+{
+    /* constrain images on small screens */
+    max-width: 100%;
+}
+.total{
+    font-weight: bold;
+}
+.itable{
+    text-align: left;
+}
+#progress{
+    font-weight: bold;
+    font: Lucida;
+    font-size: large;
+}
+#hcomp{
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: 3px 4px salmon;
+}
+.logo
+{
+  max-width: 50px;
+}
+
+
+
+.main_resources {
+    text-align: center;
+    font-size: 65px;
+    font-variant: small-caps
+}
+
+.w3-xxxlarge {
+    background-color: black;
+    border: none;
+    color: white;
+    width: 100%;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.w3-xxxlarge:hover {
+    background: lightgrey;
+    color: black;
+}
+
+#belonging {
+    font-size: 100px;
+    text-align: center;
+}
+
+h4 {
+    border-top: 2px dotted #e6e6e6;
+    text-decoration: underline;
+    text-shadow: 1px grey;
+    line-height: 30px;
+    text-align: left;
+}
+
+.sub {
+    font-size: 40px;
+    text-align: center;
+    line-height: 60px;
+    font: Georgia;
+    font-weight: 150;
+}
+
+.description {
+    font: 15px/25px Georgia, serif;
+    font-weight: bold;
+    color: #8c8c8c;
+    text-align: left;
+}
+
+.opportunities {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.carousel-inner1 {
+    width: 500px;
+    height: 650px;
+}
+
+
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 55px;
+  color: black;
+}
+
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 55px;
+  color: black;
+}
+
+.carousel-indicators li{
+    display: inline-block;
+    width: 33px;
+    height: 48px;
+    margin: 10px;
+    text-indent: 0;
+    cursor: pointer;
+    border: none;
+    background-color: #0000ff;
+    box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.5);
+    bottom:-50px;
+}
+.carousel-indicators .active {
+    width: 30px;
+    height: 3px;
+    margin: 10px;
+    background-color: black;
+    bottom:-50px;
+}
+#image{
+    margin-left: 36%;
+    margin-right:64%;
+}
