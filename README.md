@@ -3,7 +3,7 @@ Women in Computer Science. The current comping process requires students to
 submit a Google form stating the individual’s name, the event category, and
 some sort of proof of attendance. The current comp process is inefficient for
 compers due to the student’s inability to access the events they have successfully
-comped. Due to this hindrance, Alexa Lagunas, Halle Clottey, and Natalia Calvo have
+comped. Due to this hindrance, Natalia Calvo, Alexa Lagunas, and Halle Clottey have
 implemented a site specifically to keep track of the events students go to.
 
 GETTING STARTED:
